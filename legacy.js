@@ -1,4 +1,5 @@
-import md5 from 'js-md5';
+// import { md5 } from 'js-md5';
+import md5 from './md5.js';
 import { toBytes, generateRandom, base64Encode, base64Decode } from './common.js';
 
 const BLOCK_SIZE = 16;
