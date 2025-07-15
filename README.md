@@ -1,7 +1,7 @@
-# AES Everywhere JS
+# AesBridge JS
 ![CI Status](https://github.com/mervick/aes-bridge-js/actions/workflows/tests.yml/badge.svg)
 
-AES Everywhere is a modern, secure, and cross-language AES encryption library that supports **GCM**, **CBC**, and **legacy AES Everywhere** modes.
+AesBridge is a modern, secure, and cross-language AES encryption library that supports **GCM**, **CBC**, and **legacy AES Everywhere** modes.
 
 This is the **JavaScript implementation** of the core project.  
 👉 Main repository: https://github.com/mervick/aes-bridge
@@ -23,9 +23,9 @@ npm install aes-bridge
 yarn add aes-bridge
 ```
 
-## Usage
+### Usage
 
-### Browser (UMD)
+#### Browser (UMD)
 
 ```html
 <script src="aes-bridge.umd.js"></script>
@@ -37,7 +37,7 @@ yarn add aes-bridge
 </script>
 ```
 
-### Node (ESM)
+#### Node (ESM)
 
 ```js
 import { encrypt, decrypt } from 'aes-bridge';
