@@ -1,0 +1,42 @@
+{
+  "name": "aes-bridge",
+  "version": "2.0.0",
+  "description": "AesBridge is a modern, secure and cross-language AES encryption library",
+  "type": "module",
+  "main": "dist/aes-bridge.umd.js",
+  "module": "dist/aes-bridge.esm.js",
+  "exports": {
+    "import": "./dist/aes-bridge.esm.js",
+    "require": "./dist/aes-bridge.umd.js"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mervick/aes-bridge-javascript.git"
+  },
+  "keywords": [
+    "aes",
+    "security",
+    "cryptography",
+    "encryption"
+  ],
+  "author": {
+    "name": "Andrey Izman",
+    "email": "izmanw@gmail.com",
+    "url": "https://github.com/mervick"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mervick/aes-bridge-javascript/issues"
+  },
+  "homepage": "https://github.com/mervick/aes-bridge-javascript",
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "js-md5": "^0.8.3"
+  }
+}
