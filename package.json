@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mervick/aes-bridge-javascript.git"
+    "url": "git+https://github.com/mervick/aes-bridge-js.git"
   },
   "keywords": [
     "aes",
@@ -30,13 +30,14 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mervick/aes-bridge-javascript/issues"
+    "url": "https://github.com/mervick/aes-bridge-js/issues"
   },
-  "homepage": "https://github.com/mervick/aes-bridge-javascript",
+  "homepage": "https://github.com/mervick/aes-bridge-js",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
     "vitest": "^3.2.4"
-  },
-  "dependencies": {
-    "js-md5": "^0.8.3"
   }
 }
