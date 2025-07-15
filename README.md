@@ -19,7 +19,7 @@ This is the **JavaScript implementation** of the core project.
 
 ```bash
 npm install aes-bridge
-// or
+# or
 yarn add aes-bridge
 ```
 
@@ -32,12 +32,18 @@ yarn add aes-bridge
 <script>
   const { encrypt, decrypt } = window.aes_bridge;
 
-  const ciphertext = encrypt("My secret message", "MyStrongPass")
-  const plaintext = decrypt(ciphertext, "MyStrongPass")
+  const ciphertext = await encrypt("My secret message", "MyStrongPass")
+  const plaintext = await decrypt(ciphertext, "MyStrongPass")
 </script>
 ```
 
-#### Node (ESM)
+#### CDN Option
+```html
+<script src="https://cdn.jsdelivr.net/npm/aes-bridge@v2.0.0/dist/aes-bridge.umd.js"></script>
+```
+
+#### Node.js (ES Modules)
+For Node.js applications using ES Modules:
 
 ```js
 import { encrypt, decrypt } from 'aes-bridge';
