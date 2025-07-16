@@ -1,7 +1,8 @@
 # AesBridge JS
 ![CI Status](https://github.com/mervick/aes-bridge-js/actions/workflows/tests.yml/badge.svg)
 
-AesBridge is a modern, secure, and cross-language AES encryption library that supports **GCM**, **CBC**, and **legacy AES Everywhere** modes.
+**AesBridge** is a modern, secure, and cross-language **AES** encryption library. It offers a unified interface for encrypting and decrypting data across multiple programming languages. Supports **GCM**, **CBC**, and **legacy AES Everywhere** modes.
+
 
 This is the **JavaScript implementation** of the core project.  
 👉 Main repository: https://github.com/mervick/aes-bridge
@@ -11,7 +12,9 @@ This is the **JavaScript implementation** of the core project.
 - 🔐 AES-256 encryption in GCM and CBC modes
 - 🌍 Unified cross-language design
 - 📦 Compact binary format or base64 output
-- ✅ Works in both Node.js and browsers (UMD + ESM + CJS)
+- ✅ HMAC Integrity: CBC mode includes HMAC verification
+- 🔄 Backward Compatible: Supports legacy AES Everywhere format
+- 💻  Works in both Node.js and browsers (UMD + ESM + CJS)
 
 ## Quick Start
 
@@ -65,23 +68,7 @@ const plaintext = await decrypt(ciphertext, 'MyStrongPass');
 - `decrypt(ciphertext, passphrase)`  
   Decrypts a base64-encoded string encrypted with AES-GCM.
 
-### CBC Mode
-
-- `encryptCbc(data, passphrase)`  
-  Encrypts a string using AES-CBC. 
-  HMAC is used for integrity verification.  
-  **Returns:** base64-encoded string.  
-
-- `decryptCbc(ciphertext, passphrase)`  
-  Decrypts a base64-encoded string encrypted with `encrypt_cbc` and verifies HMAC.
-
-- `encryptCbcBin(data, passphrase)`  
-  Returns encrypted binary data using AES-CBC with HMAC.
-
-- `decryptCbcBin(ciphertext, passphrase)`  
-  Decrypts binary data encrypted with `encrypt_cbc_bin` and verifies HMAC.
-
-### GCM Mode
+### GCM Mode (recommended)
 
 - `encryptGcm(data, passphrase)`  
   Encrypts a string using AES-GCM.
@@ -95,6 +82,22 @@ const plaintext = await decrypt(ciphertext, 'MyStrongPass');
 
 - `decryptGcmBin(ciphertext, passphrase)`  
   Decrypts binary data encrypted with `encryptGcmBin`.
+
+### CBC Mode
+
+- `encryptCbc(data, passphrase)`  
+  Encrypts a string using AES-CBC. 
+  HMAC is used for integrity verification.  
+  **Returns:** base64-encoded string.  
+
+- `decryptCbc(ciphertext, passphrase)`  
+  Decrypts a base64-encoded string encrypted with `encryptCbc` and verifies HMAC.
+
+- `encryptCbcBin(data, passphrase)`  
+  Returns encrypted binary data using AES-CBC with HMAC.
+
+- `decryptCbcBin(ciphertext, passphrase)`  
+  Decrypts binary data encrypted with `encryptCbcBin` and verifies HMAC.
 
 ### Legacy Compatibility
 
