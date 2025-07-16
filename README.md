@@ -1,4 +1,5 @@
 # AesBridge JS
+![NPM Version](https://img.shields.io/npm/v/aes-bridge.svg)
 ![CI Status](https://github.com/mervick/aes-bridge-js/actions/workflows/tests.yml/badge.svg)
 
 **AesBridge** is a modern, secure, and cross-language **AES** encryption library. It offers a unified interface for encrypting and decrypting data across multiple programming languages. Supports **GCM**, **CBC**, and **legacy AES Everywhere** modes.
