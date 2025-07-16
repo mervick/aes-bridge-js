@@ -1,11 +1,11 @@
 import json from '@rollup/plugin-json';
 import terser from '@rollup/plugin-terser';
-// import commonjs from '@rollup/plugin-commonjs'; 
+// import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default [
   {
-    input: 'index.js',
+    input: 'src/index.js',
     output: [
       {
         file: 'dist/aes-bridge.esm.js',
@@ -27,7 +27,7 @@ export default [
     plugins: [
       // commonjs(),
       nodeResolve(),
-      json(), 
+      json(),
       terser({
         format: {
           comments: false

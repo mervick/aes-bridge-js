@@ -2,7 +2,7 @@ import {
     encryptCbc, decryptCbc,
     encryptGcm, decryptGcm,
     encryptLegacy, decryptLegacy
-} from '../index.js';
+} from '../src/index.js';
 
 import { readFile } from 'node:fs/promises';
 import { describe, it, expect } from 'vitest';
