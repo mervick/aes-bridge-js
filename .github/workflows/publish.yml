@@ -1,13 +1,16 @@
 name: Publish to npm
 
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types: [published]
 
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: npm
+      url: https://www.npmjs.com/package/aes-bridge
 
     steps:
       - name: Checkout repository
