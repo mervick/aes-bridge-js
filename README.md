@@ -135,8 +135,9 @@ All functions in this library return a `Promise`. Specifically:
 * `decrypt`, `decryptGcm`, `decryptGcmBin`, `decryptCbc`, `decryptCbcBin`, `decryptLegacy`  
 **Returns:** `Promise<Uint8Array>` - raw binary data.
 
+---
 
-## Converting `Uint8Array` to `string`
+### Converting `Uint8Array` to `string`
 
 As noted above, decryption functions and binary encryption functions (those with `decrypt` or `Bin` in their name) return a `Promise<Uint8Array>`. If you need to convert this `Uint8Array` back into a human-readable string, you'll typically use the `TextDecoder` API, especially if the original data was a UTF-8 encoded string.
 
