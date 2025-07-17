@@ -35,8 +35,8 @@ const IV_LEN = 16;
  * Output: Base64 encoded "Salted__" + salt(8) + ciphertext
  *
  * @param {string|Uint8Array} raw - Data to encrypt
- * @param {string|Uint8Array} passphrase - Password
- * @returns {string} - Base64 encoded ciphertext
+ * @param {string|Uint8Array} passphrase - Passphrase for key derivation
+ * @returns {Promise<string>} - Base64 encoded encrypted string
  */
 export async function encryptLegacy(raw, passphrase) {
   const salt = generateRandom(8);
