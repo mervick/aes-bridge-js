@@ -39,5 +39,9 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "crypto": "^1.0.1"
   }
 }
