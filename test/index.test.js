@@ -52,13 +52,13 @@ describe('AES Bridge Tests', async () => {
   }
 
   // Group 3: exact expected results from test_data["tests"]
-  for (const [idx, test] of (json.tests || []).entries()) {
+  for (const [idx, test] of (json.decrypt || []).entries()) {
     const id = test.id || `case_${idx}`;
     const pass = test.passphrase;
 
-    let input = test.plaintext
-      ? encoder.encode(test.plaintext)
-      : fromHex(test.hex);
+    let input = test.hex
+      ? fromHex(test.hex)
+      : encoder.encode(test.plaintext);
 
     if (test['encrypted-cbc']) {
       cases.push({
