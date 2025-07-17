@@ -1,9 +1,9 @@
 /**
  * [js-md5]{@link https://github.com/emn178/js-md5}
- * 
+ *
  * @version 0.8.3
  * @license MIT
- * 
+ *
  * Copyright 2014-2023 Chen, Yi-Cyuan
  *
  * Permission is hereby granted, free of charge, to any person obtaining
@@ -160,9 +160,9 @@ var createOutputMethod = function (outputType) {
  */
 var createMethod = function () {
   var method = createOutputMethod('hex');
-  if (NODE_JS) {
-    method = nodeWrap(method);
-  }
+  // if (NODE_JS) {
+  //   method = nodeWrap(method);
+  // }
   method.create = function () {
     return new Md5();
   };
