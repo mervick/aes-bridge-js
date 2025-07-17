@@ -85,15 +85,19 @@ program
                   throw new Error('Invalid decryption mode.');
           }
 
-          const decoder = new TextDecoder('utf-8', { fatal: true });
-          decryptedResult = decoder.decode(decryptedResult);
-
           if (options.b64) {
-              // If --b64, encode the decrypted result to base64.
-              console.log(decryptedResult.toString('base64'));
+            // If --b64, encode the decrypted result to base64.
+            let binaryString = '';
+            decryptedResult.forEach(byte => {
+              binaryString += String.fromCharCode(byte);
+            });
+
+            console.log(btoa(binaryString));
           } else {
-              // Otherwise, assume it's UTF-8 and print.
-              console.log(decryptedResult.toString('utf8'));
+            const decoder = new TextDecoder('utf-8', { fatal: true });
+            decryptedResult = decoder.decode(decryptedResult);
+            // Otherwise, assume it's UTF-8 and print.
+            console.log(decryptedResult.toString('utf8'));
           }
       } catch (error) {
           console.error(`Error: ${error.message}`);
