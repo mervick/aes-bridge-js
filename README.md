@@ -43,7 +43,7 @@ yarn add aes-bridge
 
 #### CDN Option
 ```html
-<script src="https://cdn.jsdelivr.net/npm/aes-bridge@v2.0.0/dist/aes-bridge.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aes-bridge@v2.0.5/dist/aes-bridge.umd.js"></script>
 ```
 
 #### Node.js (ES Modules)
