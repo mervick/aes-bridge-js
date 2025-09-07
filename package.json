@@ -1,16 +1,24 @@
 {
   "name": "aes-bridge",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "AesBridge is a modern, secure and cross-language AES encryption library",
   "type": "module",
   "main": "dist/aes-bridge.umd.js",
   "module": "dist/aes-bridge.esm.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    "import": "./dist/aes-bridge.esm.js",
-    "require": "./dist/aes-bridge.umd.js"
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/aes-bridge.esm.js"
+    },
+    "require": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/aes-bridge.umd.js"
+    }
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && npm run copy-types",
+    "copy-types": "cp src/*.d.ts dist/ 2>/dev/null || true",
     "test": "vitest"
   },
   "repository": {
