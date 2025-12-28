@@ -12,9 +12,7 @@ jobs:
       id-token: write
       contents: read
 
-    environment:
-      name: npm
-      url: https://www.npmjs.com/package/aes-bridge
+    environment: npm
 
     steps:
       - name: Checkout repository
@@ -32,6 +30,6 @@ jobs:
         run: npm run build
 
       - name: Publish to npm
-        run: npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ""
+        run: |
+          npm config delete //registry.npmjs.org/:_authToken
+          npm publish --access public --provenance

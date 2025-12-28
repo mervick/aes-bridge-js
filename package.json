@@ -1,6 +1,6 @@
 {
   "name": "aes-bridge",
-  "version": "2.1.1",
+  "version": "2.1.0",
   "description": "AesBridge is a modern, secure and cross-language AES encryption library",
   "main": "dist/aes-bridge.umd.js",
   "module": "dist/aes-bridge.esm.js",
