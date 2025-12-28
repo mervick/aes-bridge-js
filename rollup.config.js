@@ -1,6 +1,6 @@
 import json from '@rollup/plugin-json';
 import terser from '@rollup/plugin-terser';
-// import commonjs from '@rollup/plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default [
@@ -21,11 +21,13 @@ export default [
       {
         file: 'dist/aes-bridge.cjs.js',
         format: 'cjs',
-        sourcemap: true
+        sourcemap: true,
+        exports: 'named',
+        esModule: false
       }
     ],
     plugins: [
-      // commonjs(),
+      commonjs(),
       nodeResolve(),
       json(),
       terser({
@@ -33,6 +35,7 @@ export default [
           comments: false
         }
       })
-    ]
+    ],
+    external: []
   }
 ];
